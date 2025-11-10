@@ -1,6 +1,6 @@
 #include "../include/Matrix.h"
 #include <iostream>
-
+//comentario para commit2
 // Constructor: inicializa matriz con ceros
 Matrix::Matrix(int r, int c) : rows(r), cols(c) {
     data.resize(rows, std::vector<double>(cols, 0.0));
