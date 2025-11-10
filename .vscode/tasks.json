@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compilar MathLib",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\test\\test_matrix.cpp",
+                "${workspaceFolder}\\src\\Matrix.cpp",
+                "-I",
+                "${workspaceFolder}\\include",
+                "-std=c++11",
+                "-o",
+                "${workspaceFolder}\\test_program.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compila MathLib completo"
+        },
+        {
+            "label": "Compilar y Ejecutar MathLib",
+            "type": "shell",
+            "command": "${workspaceFolder}\\test_program.exe",
+            "dependsOn": "Compilar MathLib",
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
